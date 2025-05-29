@@ -1,4 +1,4 @@
-// File: /Users/sam.walsh/Documents/Sites/credera-product-template/src/app/page.tsx
+// File: /Users/sam.walsh/Documents/Sites/credera-xd-ai-hackathon-2025/src/app/page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

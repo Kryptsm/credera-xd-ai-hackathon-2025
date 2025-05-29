@@ -1,4 +1,8 @@
 import { Author } from '@/components/Author'
+import CrederaBlog from '@/components/CrederaBlog'
+import CrederaHeader from '@/components/CrederaHeader'
+import CrederaStore from '@/components/CrederaStore'
+import CrederaTeam from '@/components/CrederaTeam'
 import { Footer } from '@/components/Footer'
 import { FreeChapters } from '@/components/FreeChapters'
 import { Hero } from '@/components/Hero'
@@ -16,6 +20,9 @@ import avatarImage2 from '@/images/avatars/avatar-2.png'
 export default function Home() {
   return (
     <>
+      <CrederaHeader />
+      <CrederaBlog />
+      <CrederaTeam />
       <Hero />
       <Introduction />
       <NavBar />
@@ -55,6 +62,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <Author />
+      <CrederaStore />
       <Footer />
     </>
   )
