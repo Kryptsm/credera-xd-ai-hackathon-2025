@@ -8,19 +8,21 @@ import coverImage from '@/images/intelligent-enterprise.jpg'
 function Testimonial() {
   return (
     <figure className="relative mx-auto max-w-md text-center lg:mx-0 lg:text-left">
-      <div className="flex justify-center text-blue-600 lg:justify-start">
+      <div className="flex justify-center text-blue-[#496986] lg:justify-start">
         <StarRating />
       </div>
       <blockquote className="mt-2">
         <p className="font-display text-xl font-medium text-slate-900">
-          “A consulting firm with a unique approach.”
+          “Worth a read! I've worked with both Vincent and Jason for years and
+          can 100% confirm they know what they're talking about when it comes to
+          enterprise-scale AI.”
         </p>
       </blockquote>
       <figcaption className="mt-2 text-sm text-slate-500">
-        <strong className="font-semibold text-blue-600 before:content-['—_']">
-          Lady Gaga
+        <strong className="font-semibold text-blue-[#496986] before:content-['—_']">
+          Jake Carter
         </strong>
-        , Leader of the Culture, Mother
+        , Partner
       </figcaption>
     </figure>
   )
@@ -31,7 +33,7 @@ export function Hero() {
     <header className="overflow-hidden bg-slate-100 lg:bg-transparent lg:px-5">
       <div className="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-20 lg:grid-cols-12 lg:gap-y-20 lg:px-3 lg:pt-20 lg:pb-36 xl:py-32">
         <div className="relative flex items-end lg:col-span-5 lg:row-span-2">
-          <div className="absolute -top-20 right-1/2 -bottom-12 left-0 z-10 rounded-br-6xl bg-blue-600 text-white/10 md:bottom-8 lg:-inset-y-32 lg:right-full lg:left-[-100vw] lg:-mr-40">
+          <div className="absolute -top-20 right-1/2 -bottom-12 left-0 z-10 rounded-br-6xl bg-[#496986] text-white/10 md:bottom-8 lg:-inset-y-32 lg:right-full lg:left-[-100vw] lg:-mr-40">
             <GridPattern
               x="100%"
               y="100%"

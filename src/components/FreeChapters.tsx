@@ -7,7 +7,7 @@ export function FreeChapters() {
     <section
       id="free-chapters"
       aria-label="Free preview"
-      className="scroll-mt-14 bg-blue-600 sm:scroll-mt-32"
+      className="scroll-mt-14 bg-[#496986] sm:scroll-mt-32"
     >
       <div className="overflow-hidden lg:relative">
         <Container
@@ -39,7 +39,7 @@ export function FreeChapters() {
                   placeholder="Email address"
                   className="peer relative z-10 w-full appearance-none bg-transparent px-4 py-2 text-base text-white placeholder:text-white/70 focus:outline-hidden sm:py-3"
                 />
-                <div className="absolute inset-0 rounded-md border border-white/20 peer-focus:border-blue-300 peer-focus:bg-blue-500 peer-focus:ring-1 peer-focus:ring-blue-300 sm:rounded-xl" />
+                <div className="absolute inset-0 rounded-md border border-white/20 peer-focus:border-blue-300 peer-focus:bg-[#496986] peer-focus:ring-1 peer-focus:ring-blue-300 sm:rounded-xl" />
               </div>
               <Button
                 type="submit"

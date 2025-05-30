@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { GridPattern } from '@/components/GridPattern'
-import { SectionHeading } from '@/components/SectionHeading'
 import authorImage from '@/images/avatars/jason-goth.jpg'
 
 function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -34,9 +33,6 @@ export function Author() {
             />
           </div>
           <div className="px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32">
-            <SectionHeading number="5" id="author-title">
-              Author
-            </SectionHeading>
             <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
               <span className="block text-blue-600">Jason Goth –</span> Hey
               there, I’m one of the authors behind ‘The Intelligent Enterprise’.

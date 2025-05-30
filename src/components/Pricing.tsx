@@ -25,7 +25,7 @@ function Plan({
     <div
       className={clsx(
         'relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12',
-        featured && 'bg-blue-600 sm:shadow-lg',
+        featured && 'bg-[#E55F4C] sm:shadow-lg',
       )}
     >
       {featured && (
@@ -104,52 +104,78 @@ function Plan({
   )
 }
 
-export function Pricing() {
+export interface PricingProps {
+  plans?: Array<{
+    name: string
+    description: string
+    price: string
+    features: Array<string>
+    href: string
+    featured?: boolean
+  }>
+  heading?: string
+  subheading?: string
+  description?: string
+}
+
+export function Pricing({
+  plans = [
+    {
+      name: 'Essential',
+      description:
+        'Stay stocked with the basics! With the Credera Essentials Subscription, you’ll receive a monthly delivery of staple Credera-branded items like t-shirts, mugs, notebooks, and stickers. Perfect for new team members or anyone who wants to keep their Credera swag collection fresh and up-to-date.',
+      price: '15',
+      href: '#',
+      features: [
+        'Monthly delivery of Credera-branded basics',
+        'Includes t-shirts, mugs, notebooks, and stickers',
+        'Early access to new staple merchandise',
+        'Welcome gift in your first box',
+        'Easy plan management and cancellation',
+        'Standard shipping included',
+      ],
+    },
+    {
+      featured: true,
+      name: 'Complete',
+      description:
+        'Elevate your swag game! The Credera Premium Experience delivers a curated box of exclusive, limited-edition Credera merchandise every month. Enjoy premium apparel, tech gadgets, and surprise seasonal items you won’t find anywhere else. Treat yourself or a colleague to the ultimate Credera gear experience!',
+      price: '50',
+      href: '#',
+      features: [
+        'Monthly delivery of exclusive, limited-edition Credera gear',
+        'Premium apparel (hoodies, polos, hats, etc.)',
+        'Tech gadgets and unique accessories',
+        'Surprise seasonal and themed items',
+        'Priority customer support',
+        'Early access to special releases and collaborations',
+        'Welcome box with bonus premium item',
+        'Free expedited shipping',
+      ],
+    },
+  ],
+  subheading = 'Pick your subscription',
+  description = 'A subscription ensures you never miss out on the latest Credera swag, making it easy and fun to stay stocked with fresh, branded gear all year long.',
+}: PricingProps) {
   return (
     <section
       id="pricing"
       aria-labelledby="pricing-title"
-      className="scroll-mt-14 pt-16 pb-8 sm:scroll-mt-32 sm:pt-20 sm:pb-10 lg:pt-32 lg:pb-16"
+      className="scroll-mt-14 pt-16 pb-8 sm:scroll-mt-32 sm:pt-20 sm:pb-10 lg:pt-0 lg:pb-16"
     >
       <Container>
-        <SectionHeading number="4" id="pricing-title">
-          Pricing
-        </SectionHeading>
         <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-          Pick your package
+          {subheading}
         </p>
         <p className="mt-4 max-w-xl text-lg tracking-tight text-slate-600">
-          “Everything Starts as a Square” is available in two different packages
-          so you can pick the one that’s right for you.
+          {description}
         </p>
       </Container>
       <div className="mx-auto mt-16 max-w-5xl lg:px-6">
         <div className="grid bg-slate-50 sm:px-6 sm:pb-16 md:grid-cols-2 md:rounded-6xl md:px-8 md:pt-16 lg:p-20">
-          <Plan
-            name="Essential"
-            description="The perfect starting point if you’re on a budget."
-            price="15"
-            href="#"
-            features={[
-              'The 240-page ebook',
-              'Figma AI templates',
-              'Community access',
-            ]}
-          />
-          <Plan
-            featured
-            name="Complete"
-            description="Every AI resource you could ever ask for."
-            price="229"
-            href="#"
-            features={[
-              'The 240-page ebook',
-              'Figma AI templates',
-              'Over an hour of screencasts',
-              'Weekly AI news teardowns',
-              'Community access',
-            ]}
-          />
+          {plans.map((plan) => (
+            <Plan key={plan.name} {...plan} />
+          ))}
         </div>
       </div>
     </section>

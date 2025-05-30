@@ -5,19 +5,11 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import clsx from 'clsx'
 
 const sections = [
-  {
-    id: 'table-of-contents',
-    title: (
-      <>
-        <span className="hidden lg:inline">Table of contents</span>
-        <span className="lg:hidden">Contents</span>
-      </>
-    ),
-  },
-  { id: 'screencasts', title: 'Screencasts' },
-  { id: 'resources', title: 'Resources' },
-  { id: 'pricing', title: 'Pricing' },
-  { id: 'author', title: 'Author' },
+  { id: 'featured-product', title: 'Featured Product' },
+  { id: 'intelligent-enterprise', title: 'Intelligent Enterprise' },
+  { id: 'other-products', title: 'Other Products' },
+  { id: 'subscriptions', title: 'Subscriptions' },
+  { id: 'learn-more', title: 'Learn More' },
 ]
 
 function MenuIcon({
@@ -107,12 +99,12 @@ export function NavBar() {
                 <>
                   <span
                     aria-hidden="true"
-                    className="font-mono text-sm text-blue-600"
+                    className="font-mono text-sm text-blue-[#496986]"
                   >
                     {(mobileActiveIndex + 1).toString().padStart(2, '0')}
                   </span>
                   <span className="ml-4 text-base font-medium text-slate-900">
-                    {sections[mobileActiveIndex].title}
+                    {sections[mobileActiveIndex]?.title}
                   </span>
                 </>
               )}
@@ -142,7 +134,7 @@ export function NavBar() {
                 >
                   <span
                     aria-hidden="true"
-                    className="font-mono text-sm text-blue-600"
+                    className="font-mono text-sm text-blue-[#496986]"
                   >
                     {(sectionIndex + 1).toString().padStart(2, '0')}
                   </span>
@@ -168,7 +160,7 @@ export function NavBar() {
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   sectionIndex === activeIndex
-                    ? 'border-blue-600 bg-blue-50 text-blue-600 before:text-blue-600'
+                    ? 'border-blue-[#496986] bg-blue-50 text-blue-[#496986] before:text-blue-[#496986]'
                     : 'border-transparent before:text-slate-500 hover:bg-blue-50/40 hover:before:text-slate-900',
                 )}
               >
