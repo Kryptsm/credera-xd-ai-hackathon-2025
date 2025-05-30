@@ -4,6 +4,19 @@ import { Container } from '@/components/Container/Container'
 import { GridPattern } from '@/components/GridPattern/GridPattern'
 import { StarRating } from '@/components/StarRating/StarRating'
 
+/**
+ * Testimonial component for displaying a single testimonial.
+ *
+ * @component
+ * @param {object} props
+ * @param {string} props.id - Unique testimonial id.
+ * @param {object} props.author - Author details (name, role, image).
+ * @param {React.ReactNode} props.children - Testimonial content.
+ * @returns {JSX.Element} Testimonial card.
+ *
+ * @example
+ * <Testimonial id="t1" author={{name: 'Jane', role: 'CEO', image: 'img.png'}}>Great book!</Testimonial>
+ */
 export function Testimonial({
   id,
   author,

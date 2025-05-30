@@ -3,6 +3,15 @@ import Link from 'next/link'
 import { CheckIcon } from '@/components/CheckIcon/CheckIcon'
 import { Container } from '@/components/Container/Container'
 
+/**
+ * Introduction section for the landing page.
+ *
+ * @component
+ * @returns {JSX.Element} Introduction section with book summary and features.
+ *
+ * @example
+ * <Introduction />
+ */
 export function Introduction() {
   return (
     <section

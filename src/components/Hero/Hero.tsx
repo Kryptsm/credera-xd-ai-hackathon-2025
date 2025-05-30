@@ -28,6 +28,15 @@ function Testimonial() {
   )
 }
 
+/**
+ * Hero section for the landing page, including image and testimonial.
+ *
+ * @component
+ * @returns {JSX.Element} Hero section with cover image and testimonial.
+ *
+ * @example
+ * <Hero />
+ */
 export function Hero() {
   return (
     <header className="overflow-hidden bg-slate-100 lg:bg-transparent lg:px-5">

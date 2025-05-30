@@ -32,6 +32,15 @@ const tableOfContents = {
   },
 }
 
+/**
+ * Table of contents section for the book.
+ *
+ * @component
+ * @returns {JSX.Element} Table of contents section with chapters.
+ *
+ * @example
+ * <TableOfContents />
+ */
 export function TableOfContents() {
   return (
     <section

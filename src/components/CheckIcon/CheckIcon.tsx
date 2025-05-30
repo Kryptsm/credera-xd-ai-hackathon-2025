@@ -1,3 +1,14 @@
+/**
+ * CheckIcon SVG component.
+ *
+ * Renders a checkmark icon, typically used for indicating success or completion.
+ *
+ * @param {React.ComponentPropsWithoutRef<'svg'>} props - SVG element props.
+ * @returns {JSX.Element} SVG checkmark icon.
+ *
+ * @example
+ * <CheckIcon className="h-6 w-6 text-green-500" />
+ */
 export function CheckIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 32 32" {...props}>

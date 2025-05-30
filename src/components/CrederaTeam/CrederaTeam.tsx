@@ -50,6 +50,15 @@ const people = [
   // More people...
 ]
 
+/**
+ * Team section for displaying Credera leadership and team members.
+ *
+ * @component
+ * @returns {JSX.Element} Team section with people cards.
+ *
+ * @example
+ * <CrederaTeam />
+ */
 export default function CrederaTeam() {
   return (
     <div className="bg-white py-24 sm:py-32">

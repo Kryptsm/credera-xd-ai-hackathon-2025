@@ -12,6 +12,16 @@ const sections = [
   { id: 'learn-more', title: 'Learn More' },
 ]
 
+/**
+ * Menu icon for the navigation bar.
+ *
+ * @param {object} props
+ * @param {boolean} props.open - Whether the menu is open.
+ * @returns {JSX.Element} SVG menu icon.
+ *
+ * @example
+ * <MenuIcon open={true} />
+ */
 function MenuIcon({
   open,
   ...props
@@ -35,6 +45,15 @@ function MenuIcon({
   )
 }
 
+/**
+ * Navigation bar for the site.
+ *
+ * @component
+ * @returns {JSX.Element} Navigation bar with sections and menu icon.
+ *
+ * @example
+ * <NavBar />
+ */
 export function NavBar() {
   let navBarRef = useRef<React.ElementRef<'div'>>(null)
   let [activeIndex, setActiveIndex] = useState<number | null>(null)

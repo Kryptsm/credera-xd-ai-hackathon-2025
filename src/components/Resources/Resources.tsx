@@ -57,6 +57,15 @@ const resources = [
   },
 ]
 
+/**
+ * Resources section for additional downloads and community links.
+ *
+ * @component
+ * @returns {JSX.Element} Resources section with resource cards.
+ *
+ * @example
+ * <Resources />
+ */
 export function Resources() {
   return (
     <section

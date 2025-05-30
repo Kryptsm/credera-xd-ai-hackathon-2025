@@ -85,6 +85,15 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
+/**
+ * Store section for Credera-branded products.
+ *
+ * @component
+ * @returns {JSX.Element} Store section with product details and purchase options.
+ *
+ * @example
+ * <CrederaStore />
+ */
 export default function CrederaStore() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])

@@ -1,5 +1,18 @@
 import clsx from 'clsx'
 
+/**
+ * Section heading component for numbered section titles.
+ *
+ * @component
+ * @param {object} props
+ * @param {string} props.number - Section number.
+ * @param {string} [props.className] - Additional class names.
+ * @param {React.ReactNode} props.children - Section title content.
+ * @returns {JSX.Element} Section heading.
+ *
+ * @example
+ * <SectionHeading number="1">Introduction</SectionHeading>
+ */
 export function SectionHeading({
   number,
   children,

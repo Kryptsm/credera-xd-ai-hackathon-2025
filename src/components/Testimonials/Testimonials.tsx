@@ -133,6 +133,15 @@ function Testimonial({
   )
 }
 
+/**
+ * Testimonials section for displaying multiple testimonials.
+ *
+ * @component
+ * @returns {JSX.Element} Testimonials section with testimonial cards.
+ *
+ * @example
+ * <Testimonials />
+ */
 export function Testimonials() {
   return (
     <section className="py-8 sm:py-10 lg:py-16">

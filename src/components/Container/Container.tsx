@@ -7,6 +7,18 @@ const styles = {
   lg: 'mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-8',
 }
 
+/**
+ * Responsive container component for layout constraints.
+ *
+ * @component
+ * @param {object} props
+ * @param {'xs'|'sm'|'md'|'lg'} [props.size='sm'] - Container size.
+ * @param {string} [props.className] - Additional class names.
+ * @returns {JSX.Element} Responsive container div.
+ *
+ * @example
+ * <Container size="md">Content</Container>
+ */
 export function Container({
   size = 'sm',
   className,

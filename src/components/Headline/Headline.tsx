@@ -8,6 +8,20 @@ type HeadlineProps = {
   number?: string
 }
 
+/**
+ * Headline section for page headings and taglines.
+ *
+ * @component
+ * @param {object} props
+ * @param {string} [props.tagline] - Tagline text.
+ * @param {string} [props.headline] - Main headline text.
+ * @param {string} [props.id] - Section id.
+ * @param {string} [props.number] - Section number.
+ * @returns {JSX.Element} Headline section.
+ *
+ * @example
+ * <Headline tagline="Welcome" headline="Main Title" />
+ */
 export function Headline({ tagline, headline, id, number }: HeadlineProps) {
   return (
     <section

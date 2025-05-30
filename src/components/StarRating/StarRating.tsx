@@ -1,11 +1,14 @@
-function StarIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 20 20" {...props}>
-      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-    </svg>
-  )
-}
-
+/**
+ * Star rating component for displaying a number of stars.
+ *
+ * @component
+ * @param {object} props
+ * @param {1|2|3|4|5} [props.rating=5] - Number of stars to display.
+ * @returns {JSX.Element} Star rating display.
+ *
+ * @example
+ * <StarRating rating={4} />
+ */
 export function StarRating({ rating = 5 }: { rating?: 1 | 2 | 3 | 4 | 5 }) {
   return (
     <div className="flex gap-1">
@@ -13,5 +16,22 @@ export function StarRating({ rating = 5 }: { rating?: 1 | 2 | 3 | 4 | 5 }) {
         <StarIcon key={index} className="h-5 w-5 fill-current" />
       ))}
     </div>
+  )
+}
+
+/**
+ * Star icon for the StarRating component.
+ *
+ * @param {React.ComponentPropsWithoutRef<'svg'>} props - SVG props
+ * @returns {JSX.Element} SVG star icon
+ *
+ * @example
+ * <StarIcon />
+ */
+function StarIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" {...props}>
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </svg>
   )
 }

@@ -24,12 +24,26 @@ interface CrederaHeaderProps {
   subtitle?: string
 }
 
+/**
+ * Header section for the Credera landing page.
+ *
+ * @component
+ * @param {object} props
+ * @param {string} [props.title] - Main heading text.
+ * @param {string} [props.subtitle] - Subheading text.
+ * @returns {JSX.Element} Header section with background and stats.
+ *
+ * @example
+ * <CrederaHeader title="Welcome" subtitle="Our mission" />
+ */
 export default function CrederaHeader({ title, subtitle }: CrederaHeaderProps) {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
         alt=""
-        src={typeof coverImage === 'string' ? coverImage : (coverImage as any).src}
+        src={
+          typeof coverImage === 'string' ? coverImage : (coverImage as any).src
+        }
         className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
       />
       <div

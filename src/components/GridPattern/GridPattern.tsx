@@ -1,5 +1,15 @@
 import { useId } from 'react'
 
+/**
+ * SVG grid pattern background for sections.
+ *
+ * @component
+ * @param {object} props - Pattern SVG props (except id).
+ * @returns {JSX.Element} SVG grid pattern.
+ *
+ * @example
+ * <GridPattern x="50%" />
+ */
 export function GridPattern(
   props: Omit<React.ComponentPropsWithoutRef<'pattern'>, 'id'>,
 ) {

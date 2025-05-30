@@ -60,6 +60,15 @@ const posts = [
   // More posts...
 ]
 
+/**
+ * Blog section component displaying a list of posts.
+ *
+ * @component
+ * @returns {JSX.Element} Blog section with posts.
+ *
+ * @example
+ * <CrederaBlog />
+ */
 export default function CrederaBlog() {
   return (
     <div className="bg-white py-24 sm:py-32">

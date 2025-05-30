@@ -1,6 +1,15 @@
 import { Container } from '@/components/Container/Container'
 import { GridPattern } from '@/components/GridPattern/GridPattern'
 
+/**
+ * Footer component for the site.
+ *
+ * @component
+ * @returns {JSX.Element} Footer section with copyright.
+ *
+ * @example
+ * <Footer />
+ */
 export function Footer() {
   return (
     <footer className="relative pt-5 pb-20 sm:pt-14 sm:pb-32">

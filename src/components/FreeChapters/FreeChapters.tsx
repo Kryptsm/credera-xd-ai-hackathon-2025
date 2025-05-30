@@ -2,6 +2,15 @@ import { Button } from '@/components/Button/Button'
 import { Container } from '@/components/Container/Container'
 import { Pattern } from '@/components/Pattern/Pattern'
 
+/**
+ * FreeChapters section for email signup and sample download.
+ *
+ * @component
+ * @returns {JSX.Element} Section for free chapter signup.
+ *
+ * @example
+ * <FreeChapters />
+ */
 export function FreeChapters() {
   return (
     <section

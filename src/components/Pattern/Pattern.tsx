@@ -1,5 +1,19 @@
 import { useId } from 'react'
 
+/**
+ * SVG pattern component for decorative backgrounds.
+ *
+ * @component
+ * @param {object} props
+ * @param {number} [props.size=40] - Size of each pattern cell.
+ * @param {number} [props.gapX=16] - Horizontal gap between cells.
+ * @param {number} [props.gapY=8] - Vertical gap between cells.
+ * @param {Array<Array<0|1>>} [props.pattern] - Pattern matrix.
+ * @returns {JSX.Element} SVG pattern.
+ *
+ * @example
+ * <Pattern size={40} gapX={16} gapY={8} />
+ */
 export function Pattern({
   size = 40,
   gapX = 16,

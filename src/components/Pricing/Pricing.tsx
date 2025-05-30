@@ -118,6 +118,20 @@ export interface PricingProps {
   description?: string
 }
 
+/**
+ * Pricing section for subscription plans.
+ *
+ * @component
+ * @param {object} [props]
+ * @param {Array} [props.plans] - List of pricing plans.
+ * @param {string} [props.heading] - Section heading.
+ * @param {string} [props.subheading] - Section subheading.
+ * @param {string} [props.description] - Section description.
+ * @returns {JSX.Element} Pricing section with plans.
+ *
+ * @example
+ * <Pricing />
+ */
 export function Pricing({
   plans = [
     {
