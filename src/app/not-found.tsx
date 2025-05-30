@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import { Container } from '@/components/Container'
-import { GridPattern } from '@/components/GridPattern'
+import { Container } from '@/components/Container/Container'
+import { GridPattern } from '@/components/GridPattern/GridPattern'
 
 export default function NotFound() {
   return (
