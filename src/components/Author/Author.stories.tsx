@@ -1,10 +1,30 @@
-// Storybook story for Author
-import React from 'react';
-import { Author } from './Author';
+import type { Meta, StoryObj } from '@storybook/react'
+import React from 'react'
+import { Author } from './Author'
 
-export default {
+const meta: Meta<typeof Author> = {
   title: 'Components/Author',
   component: Author,
-};
+  tags: ['autodocs'],
+  parameters: {
+    docs: { autodocs: true },
+  },
+}
+export default meta
 
-export const Default = () => <Author />;
+type Story = StoryObj<typeof Author>
+
+/**
+ * Default Author story.
+ */
+export const Default: Story = {
+  render: () => <Author />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Displays the default Author section with biography and follow link.',
+      },
+    },
+  },
+}

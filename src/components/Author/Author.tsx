@@ -4,6 +4,12 @@ import Link from 'next/link'
 import { GridPattern } from '@/components/GridPattern/GridPattern'
 import authorImage from '@/images/avatars/jason-goth.jpg'
 
+/**
+ * X (Twitter) icon for the follow button.
+ *
+ * @param {React.ComponentPropsWithoutRef<'svg'>} props - SVG props
+ * @returns {JSX.Element} SVG X icon
+ */
 function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
@@ -12,6 +18,16 @@ function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+/**
+ * Author section component for the book landing page.
+ *
+ * Displays author information, biography, and a follow link.
+ *
+ * @component
+ * @example
+ * // Basic usage
+ * <Author />
+ */
 export function Author() {
   return (
     <section
